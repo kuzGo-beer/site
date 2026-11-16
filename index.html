@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Практика GitHub Pages</title>
+  <meta name="description" content="Учебная страница для тренировки публикации статического сайта на GitHub Pages.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+</head>
+<body id="top">
+  <header class="header">
+    <a class="logo" href="#top">🚀 pages-practice</a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="#features">Возможности</a>
+      <a href="#steps">Инструкция</a>
+      <a href="#about">О странице</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Переключить тему">🌙</button>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="badge">HTML · CSS · JavaScript · без сборки</span>
+      <h1>Привет, <span class="gradient">GitHub Pages</span>!</h1>
+      <p class="lead">
+        Это учебная страница для тренировки публикации статического сайта.
+        Меняйте код, коммитьте и смотрите, как обновляется настоящий сайт в интернете.
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#steps">Как опубликовать</a>
+        <a class="btn btn-ghost" href="https://pages.github.com/" target="_blank" rel="noopener">
+          Документация GitHub Pages
+        </a>
+      </div>
+      <p class="hint">Страница загружена: <time id="loadedAt">…</time></p>
+    </section>
+
+    <section class="section" id="features">
+      <h2>Что уже есть на странице</h2>
+      <div class="cards">
+        <article class="card">
+          <span class="icon" aria-hidden="true">🧩</span>
+          <h3>Чистая вёрстка</h3>
+          <p>Семантические теги, осмысленные заголовки и стили без внешних библиотек — всё в трёх файлах.</p>
+        </article>
+        <article class="card">
+          <span class="icon" aria-hidden="true">🌗</span>
+          <h3>Тёмная тема</h3>
+          <p>Переключатель в шапке сохраняет выбор в <code>localStorage</code> и учитывает системную настройку.</p>
+        </article>
+        <article class="card">
+          <span class="icon" aria-hidden="true">📱</span>
+          <h3>Адаптивность</h3>
+          <p>Сетка карточек и типографика подстраиваются под ширину экрана — от телефона до монитора.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="steps">
+      <h2>Как опубликовать на GitHub Pages</h2>
+      <ol class="steps">
+        <li>Создайте на GitHub репозиторий, например <code>pages-practice</code>.</li>
+        <li>Загрузите в ветку <code>main</code> три файла: <code>index.html</code>, <code>style.css</code>, <code>script.js</code>.</li>
+        <li>Откройте <strong>Settings → Pages</strong> и выберите Source: <code>Deploy from a branch</code>, ветку <code>main</code>, папку <code>/ (root)</code>. Нажмите Save.</li>
+        <li>Подождите 1–2 минуты — сайт откроется по адресу <code>https://ваш-логин.github.io/название-репозитория/</code>.</li>
+      </ol>
+      <p class="note">
+        Картинки, стили и скрипты подключены <strong>относительными путями</strong> (<code>style.css</code>, а не <code>/style.css</code>) —
+        поэтому страница работает и в корне домена, и в подпапке репозитория.
+      </p>
+    </section>
+
+    <section class="section" id="about">
+      <h2>О странице</h2>
+      <p>
+        Это минимальный статический сайт: только HTML, CSS и немного JavaScript. Такой набор GitHub Pages
+        отдаёт как есть, без сборки и сервера. Удобно тренировать коммиты, ветки и деплой: изменили текст,
+        сделали <code>git push</code> — через минуту изменение уже на сайте.
+      </p>
+      <p>
+        Проверьте, что JavaScript тоже работает:
+        <button class="like-btn" id="likeBtn" type="button">👍 Нравится <span class="like-count" id="likeCount">0</span></button>
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year">2026</span> Учебный проект для практики GitHub Pages.</p>
+    <p><a href="#top">Наверх ↑</a></p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
